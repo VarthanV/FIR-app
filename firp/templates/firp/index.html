@@ -1,0 +1,15 @@
+{% extends 'firp/base.html' %}
+
+{% block content %}
+
+<div class=" container ">
+
+{% if request.user.is_authenticated %}
+<a class="btn btn-primary mr-5 pt-10 mt-10" href="{% url 'add-fir'%}">Add FIR</a>
+<a class="btn btn-secondary mr-5" href="#"> Search FIR</a>
+<a class="btn btn-primary mr-5" href="{% url 'view-fir'%}"> View FIR</a>
+<a class="btn btn-danger" href="#"> Delete FIR </a> 
+{% endif %}
+</div>
+
+{% endblock %}

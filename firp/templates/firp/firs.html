@@ -1,0 +1,17 @@
+{% extends  'firp/base.html' %}
+
+{% block content %}
+<div class=" pt-5 text-center " style="text-align: center; align-items: center;">
+{% for fir in firs %}
+<div class="card pb-5 mb-5" style="width: 18rem;">
+    <img src={{fir.image.url}} class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{fir.name}}</h5>
+      <p class="card-text"> {{fir.description}}</p>
+    </div>
+  </div>
+
+  {% endfor %}
+</div>
+
+{% endblock %}

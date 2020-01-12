@@ -1,0 +1,38 @@
+{% extends  'firp/base.html' %}
+
+{% block content %}
+<div class="container">
+
+    <form method="POST" action="{% url 'add-fir' %}" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="form-group">
+          <label for="exampleInputEmail1"> Name  </label>
+          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="name">
+
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1"> Accused Name </label>
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="accused_name">
+  
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1"> Location  </label>
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="location">
+  
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1"> Description  </label>
+            <textarea  class="form-control" aria-describedby="emailHelp" name="description"> </textarea>
+  
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1"> Accused Image </label>
+            <input type="file" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="image">
+  
+          </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+      
+</div>
+
+{% endblock %}
