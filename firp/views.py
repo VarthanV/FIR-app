@@ -41,14 +41,14 @@ class AddFIRView(LoginRequiredMixin,View):
     def get(self,request):
         return render(request,self.template_name)
     def post(self,request):
-        fir =FIR()
-        fir.unique_id=uuid.uuid4()
-        fir.accused_name = request.POST.get('accused_name')
-        fir.location =request.POST.get('location')
+        fir = FIR()
         fir.name = request.POST.get('name')
-        fir.description =request.POST.get('description')
-        fir.image =request.FILES.get('image')
+        fir.state  = request.POST.get('state')
+        fir.station_code  = request.POST.get('station_code')
+        fir.address = request.POST.get('address')
+        fir.age = request.POST.get('age')
         fir.save()
+        return redirect('view-fir')
         return render(request,self.template_name)
 
 class FirView(View):

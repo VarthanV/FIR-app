@@ -4,10 +4,12 @@
 <div class=" pt-5 text-center " style="text-align: center; align-items: center;">
 {% for fir in firs %}
 <div class="card pb-5 mb-5" style="width: 18rem;">
-    <img src={{fir.image.url}} class="card-img-top" alt="...">
     <div class="card-body">
       <h5 class="card-title">{{fir.name}}</h5>
-      <p class="card-text"> {{fir.description}}</p>
+      <p class="card-text"> {{fir.age}}</p>
+      <p>   {{fir.address}}</p>
+      <p> {{fir.station_code}}</p>
+      <p> {{fir.state}}</p>
     </div>
   </div>
 
